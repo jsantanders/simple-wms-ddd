@@ -5,14 +5,16 @@ namespace ProjectName.Domain.Contracts
 {
     public interface IRepository
     {
-        T GetById<T, TKey>(TKey id)
-            where T : EntityBase, IAggregateRoot
+        Task<T> GetById<T, TKey>(TKey id)
+            where T : EntityBase<TKey>, IAggregateRoot
             where TKey : StronglyTypedIdBase;
 
-        Task<T> Create<T>(T entity)
-        where T : EntityBase, IAggregateRoot;
+        Task Create<T, TKey>(T entity)
+            where T : EntityBase<TKey>, IAggregateRoot
+            where TKey : StronglyTypedIdBase;
 
-        Task<T> Delete<T>(T entity)
-        where T : EntityBase, IAggregateRoot;
+        void Delete<T, TKey>(T entity)
+            where T : EntityBase<TKey>, IAggregateRoot
+            where TKey : StronglyTypedIdBase;
     }
 }

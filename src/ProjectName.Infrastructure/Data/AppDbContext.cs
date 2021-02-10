@@ -17,7 +17,6 @@ namespace ProjectName.Infrastructure.Data
             this.dispatcher = dispatcher;
         }
 
-        public DbSet<ProjectNameDict> ProjectNameDicts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -31,7 +30,7 @@ namespace ProjectName.Infrastructure.Data
 
             if(dispatcher is null) return result;
 
-            var entityWithEvents = this.ChangeTracker.Entries<EntityBase>()
+            var entityWithEvents = this.ChangeTracker.Entries<EntityBase<StronglyTypedIdBase>>()
                 .Select(e => e.Entity)
                 .Where(e => e.Events.Any())
                 .ToArray();
@@ -39,7 +38,7 @@ namespace ProjectName.Infrastructure.Data
             foreach(var entity in entityWithEvents)
             {
                 var events = entity.Events.ToArray();
-                entity.Events.Clear();
+                entity.ClearDomainEvents();
                 foreach (var @event in events)
                 {
                     this.dispatcher.Dispatch(@event);

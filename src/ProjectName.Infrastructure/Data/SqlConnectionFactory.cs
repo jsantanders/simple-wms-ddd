@@ -1,7 +1,7 @@
 using System;
 using System.Data;
-using ProjectName.Application;
 using Microsoft.Data.SqlClient;
+using ProjectName.Application.Common;
 
 namespace ProjectName.Infrastructure.Data
 {
@@ -25,6 +25,19 @@ namespace ProjectName.Infrastructure.Data
             }
 
             return this.connection;
+        }
+
+        public IDbConnection CreateNewConnection()
+        {
+            this.connection = new SqlConnection(this.connectionString);
+            this.connection.Open();
+            
+            return this.connection;
+        }
+
+        public string GetConnectionString()
+        {
+            return connectionString;
         }
 
         public void Dispose()

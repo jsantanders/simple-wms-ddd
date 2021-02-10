@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace ProjectName.Application.Common
 {
     public class InvalidCommandException : Exception

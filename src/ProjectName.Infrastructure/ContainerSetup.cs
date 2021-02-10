@@ -1,5 +1,6 @@
 using Autofac;
 using ProjectName.Application;
+using ProjectName.Application.Common;
 using ProjectName.Infrastructure.Data;
 
 namespace ProjectName.Infrastructure

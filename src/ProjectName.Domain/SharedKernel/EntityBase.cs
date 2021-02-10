@@ -4,18 +4,21 @@ using ProjectName.Domain.Contracts;
 
 namespace ProjectName.Domain.SharedKernel
 {
-    public abstract class EntityBase
+    public abstract class EntityBase<TKey>
+        where TKey : StronglyTypedIdBase
     {
-        private List<DomainEventBase> domainEvents;
+        private List<DomainEventBase> events;
 
         /// <summary>
         /// Domain events occurred.
         /// </summary>
-        public IReadOnlyCollection<DomainEventBase> DomainEvents => domainEvents?.AsReadOnly();
+        public IReadOnlyCollection<DomainEventBase> Events => events?.AsReadOnly();
+
+        public TKey Id { get; protected set; }
 
         public void ClearDomainEvents()
         {
-            domainEvents?.Clear();
+            events?.Clear();
         }
 
         /// <summary>
@@ -24,9 +27,14 @@ namespace ProjectName.Domain.SharedKernel
         /// <param name="domainEvent">Domain event.</param>
         protected void AddDomainEvent(DomainEventBase domainEvent)
         {
-            domainEvents ??= new List<DomainEventBase>();
+            events ??= new List<DomainEventBase>();
 
-            this.domainEvents.Add(domainEvent);
+            this.events.Add(domainEvent);
+        }
+
+        public void ClearEvents()
+        {
+            events.Clear();
         }
 
         protected void CheckRule(IBusinessRule rule)

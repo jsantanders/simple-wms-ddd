@@ -6,7 +6,7 @@ using ProjectName.Domain.SharedKernel;
 
 namespace ProjectName.Domain.Entities.AddressBookAggregate
 {
-    public class AddressBook : EntityBase, IAggregateRoot
+    public class AddressBook : EntityBase<AddressBookId>, IAggregateRoot
     {
         private List<Contact> contacts;
         private List<ContactLabel> labels;
@@ -14,13 +14,6 @@ namespace ProjectName.Domain.Entities.AddressBookAggregate
         private AddressBook()
         {
             Id = new AddressBookId(Guid.NewGuid());
-        }
-
-        public AddressBookId Id { get; private set; }
-
-        public AddressBook(AddressBookId id)
-        {
-            Id = id;
         }
 
         public IReadOnlyCollection<Contact> Contacts => contacts.AsReadOnly();

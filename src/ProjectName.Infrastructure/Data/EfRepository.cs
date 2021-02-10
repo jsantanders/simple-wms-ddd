@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using ProjectName.Domain.Contracts;
 using ProjectName.Domain.SharedKernel;
 
@@ -14,19 +15,25 @@ namespace ProjectName.Infrastructure.Data
             this.dbContext = dbContext;
         }
 
-        public Task<T> Create<T>(T entity) where T : EntityBase
+        public async Task<T> GetById<T, TKey>(TKey id)
+            where T : EntityBase<TKey>, IAggregateRoot
+            where TKey : StronglyTypedIdBase
         {
-            throw new NotImplementedException();
+            return await dbContext.Set<T>().SingleOrDefaultAsync(e => e.Id == id);
         }
 
-        public Task<T> Delete<T>(T entity) where T : EntityBase
+        public async Task Create<T, TKey>(T entity)
+            where T : EntityBase<TKey>, IAggregateRoot
+            where TKey : StronglyTypedIdBase
         {
-            throw new NotImplementedException();
+            await dbContext.Set<T>().AddAsync(entity);
         }
 
-        public T GetById<T>(Guid Id) where T : EntityBase
+        public void Delete<T, TKey>(T entity)
+            where T : EntityBase<TKey>, IAggregateRoot
+            where TKey : StronglyTypedIdBase
         {
-            throw new NotImplementedException();
+            dbContext.Set<T>().Remove(entity);
         }
     }
 }

@@ -1,3 +1,5 @@
+using System;
+
 namespace ProjectName.Application.Common
 {
     public interface IExecutionContextAccessor
