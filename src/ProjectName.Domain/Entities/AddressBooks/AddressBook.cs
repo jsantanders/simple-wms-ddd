@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using ProjectName.Domain.Contracts;
+using ProjectName.Domain.Entities.AddressBooks.Rules;
 using ProjectName.Domain.SharedKernel;
 
-namespace ProjectName.Domain.Entities.AddressBookAggregate
+namespace ProjectName.Domain.Entities.AddressBooks
 {
     public class AddressBook : EntityBase<AddressBookId>, IAggregateRoot
     {
@@ -27,7 +29,7 @@ namespace ProjectName.Domain.Entities.AddressBookAggregate
 
         public void AddLabel(string name, string color)
         {
-            this.CheckRule(new ContactLabelConnotBeDuplicated(name, color));
+            this.CheckRule(new ContactLabelCannotBeDuplicated(name, color));
             labels.Add(ContactLabel.Create(Id, name, color));
         }
     }

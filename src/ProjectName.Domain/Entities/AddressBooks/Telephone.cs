@@ -3,14 +3,14 @@ using System.Text.RegularExpressions;
 using Ardalis.GuardClauses;
 using ProjectName.Domain.SharedKernel;
 
-namespace ProjectName.Domain.Entities.AddressBookAggregate
+namespace ProjectName.Domain.Entities.AddressBooks
 {
     public enum TelephoneType
     {
         /// <summary>
-        /// Unknow type.
+        /// Unknown type.
         /// </summary>
-        Unknow,
+        Unknown,
 
         /// <summary>
         /// Home phone.

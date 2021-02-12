@@ -30,9 +30,6 @@ namespace ProjectName.Infrastructure.Configurations.DataAccess
                     var dbContextOptionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
                     dbContextOptionsBuilder.UseSqlServer(databaseConnectionString);
 
-                    dbContextOptionsBuilder
-                        .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector>();
-
                     var eventDispatcher = c.Resolve<IDomainEventDispatcher>();
 
                     return new AppDbContext(dbContextOptionsBuilder.Options, eventDispatcher);

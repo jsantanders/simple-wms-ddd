@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using Ardalis.GuardClauses;
-using ProjectName.Domain.Entities.AddressBookAggregate.Events;
-using ProjectName.Domain.Entities.AddressBookAggregate.Rules;
+using ProjectName.Domain.Entities.AddressBooks.Events;
+using ProjectName.Domain.Entities.AddressBooks.Rules;
 using ProjectName.Domain.SharedKernel;
 
-namespace ProjectName.Domain.Entities.AddressBookAggregate
+namespace ProjectName.Domain.Entities.AddressBooks
 {
-    public class Contact : EntityBase
+    public class Contact : EntityBase<ContactId>
     {
         private List<Telephone> telephones;
         private List<Email> emails;

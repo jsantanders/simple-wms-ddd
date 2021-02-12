@@ -1,6 +1,6 @@
 using ProjectName.Domain.SharedKernel;
 
-namespace ProjectName.Domain.Entities.AddressBookAggregate
+namespace ProjectName.Domain.Entities.AddressBooks
 {
     public class Address : ValueObject
     {

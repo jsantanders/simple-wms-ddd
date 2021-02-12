@@ -1,6 +1,6 @@
 using ProjectName.Domain.SharedKernel;
 
-namespace ProjectName.Domain.Entities.AddressBookAggregate.Events
+namespace ProjectName.Domain.Entities.AddressBooks.Events
 {
     public class ContactCreatedDomainEvent : DomainEventBase
     {

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using ProjectName.Domain.Contracts;
 
-namespace ProjectName.Domain.Entities.AddressBookAggregate.Rules
+namespace ProjectName.Domain.Entities.AddressBooks.Rules
 {
     public class TelephoneCannotBeDuplicated : IBusinessRule
     {
@@ -15,7 +15,7 @@ namespace ProjectName.Domain.Entities.AddressBookAggregate.Rules
             this.telephone = telephone;
         }
 
-        public string Message => "This telephone alredy exist for this contact.";
+        public string Message => "This telephone already exist for this contact.";
 
         public bool IsBroken() => telephones.Any(t => t == telephone);
     }

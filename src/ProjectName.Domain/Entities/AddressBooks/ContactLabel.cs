@@ -1,12 +1,12 @@
 using System;
 using System.Text.RegularExpressions;
 using Ardalis.GuardClauses;
-using ProjectName.Domain.Entities.AddressBookAggregate.Rules;
+using ProjectName.Domain.Entities.AddressBooks.Rules;
 using ProjectName.Domain.SharedKernel;
 
-namespace ProjectName.Domain.Entities.AddressBookAggregate
+namespace ProjectName.Domain.Entities.AddressBooks
 {
-    public class ContactLabel : EntityBase
+    public class ContactLabel : EntityBase<ContactLabelId>
     {
         private const string ValidHexColorPattern = @"^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$";
 

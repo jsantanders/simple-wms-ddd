@@ -1,9 +1,9 @@
 using System.Linq;
 using System.Reflection;
 using ProjectName.Domain.Contracts;
-using ProjectName.Domain.Entities;
 using ProjectName.Domain.SharedKernel;
 using Microsoft.EntityFrameworkCore;
+using ProjectName.Infrastructure.Domain.AddressBookConfiguration;
 
 namespace ProjectName.Infrastructure.Data
 {

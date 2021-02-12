@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using ProjectName.Domain.Contracts;
 
-namespace ProjectName.Domain.Entities.AddressBookAggregate.Rules
+namespace ProjectName.Domain.Entities.AddressBooks.Rules
 {
     public class EmailCannotBeDuplicated : IBusinessRule
     {
@@ -15,7 +15,7 @@ namespace ProjectName.Domain.Entities.AddressBookAggregate.Rules
             this.email = email;
         }
 
-        public string Message => "This email alredy exist for this contact.";
+        public string Message => "This email already exist for this contact.";
 
         public bool IsBroken() => emails.Any(t => t == email);
     }

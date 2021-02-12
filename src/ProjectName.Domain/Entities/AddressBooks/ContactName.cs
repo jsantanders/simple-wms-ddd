@@ -1,7 +1,7 @@
-using ProjectName.Domain.Entities.AddressBookAggregate.Rules;
+using ProjectName.Domain.Entities.AddressBooks.Rules;
 using ProjectName.Domain.SharedKernel;
 
-namespace ProjectName.Domain.Entities.AddressBookAggregate
+namespace ProjectName.Domain.Entities.AddressBooks
 {
     public class ContactName : ValueObject
     {

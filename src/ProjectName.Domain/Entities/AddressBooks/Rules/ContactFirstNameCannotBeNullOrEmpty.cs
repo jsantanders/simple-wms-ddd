@@ -1,6 +1,6 @@
 using ProjectName.Domain.Contracts;
 
-namespace ProjectName.Domain.Entities.AddressBookAggregate.Rules
+namespace ProjectName.Domain.Entities.AddressBooks.Rules
 {
     public class ContactFirstNameCannotBeNullOrEmpty : IBusinessRule
     {

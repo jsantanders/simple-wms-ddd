@@ -1,15 +1,15 @@
 using ProjectName.Domain.Contracts;
 
-namespace ProjectName.Domain.Entities.AddressBookAggregate
+namespace ProjectName.Domain.Entities.AddressBooks.Rules
 {
-    public class ContactLabelConnotBeDuplicated : IBusinessRule
+    public class ContactLabelCannotBeDuplicated : IBusinessRule
     {
         private readonly string name;
         private readonly string color;
 
         public string Message => throw new System.NotImplementedException();
 
-        public ContactLabelConnotBeDuplicated(string name, string color)
+        public ContactLabelCannotBeDuplicated(string name, string color)
         {
             this.name = name;
             this.color = color;
