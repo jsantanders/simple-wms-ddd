@@ -1,4 +1,5 @@
 using Autofac;
+using Serilog;
 
 namespace ProjectName.Infrastructure.Configurations.Logging
 {

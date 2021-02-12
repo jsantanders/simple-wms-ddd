@@ -5,7 +5,7 @@ using ProjectName.Domain.Contracts;
 namespace ProjectName.Domain.SharedKernel
 {
     [Serializable]
-    internal class BusinessRuleValidationException : Exception
+    public class BusinessRuleValidationException : Exception
     {
         private IBusinessRule rule;
 

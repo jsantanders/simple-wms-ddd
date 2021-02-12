@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using ProjectName.Domain.Entities.AddressBookAggregate;
+using ProjectName.Domain.Entities.AddressBooks;
 
 namespace ProjectName.Infrastructure.Domain.AddressBooks
 {

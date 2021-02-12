@@ -3,7 +3,6 @@ using System.Reflection;
 using ProjectName.Domain.Contracts;
 using ProjectName.Domain.SharedKernel;
 using Microsoft.EntityFrameworkCore;
-using ProjectName.Infrastructure.Domain.AddressBookConfiguration;
 
 namespace ProjectName.Infrastructure.Data
 {
@@ -16,7 +15,6 @@ namespace ProjectName.Infrastructure.Data
         {
             this.dispatcher = dispatcher;
         }
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
