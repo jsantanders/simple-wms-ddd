@@ -7,30 +7,20 @@ namespace ProjectName.Domain.SharedKernel
     [Serializable]
     public class BusinessRuleValidationException : Exception
     {
-        private IBusinessRule rule;
+        public IBusinessRule BrokenRule { get; }
 
-        public BusinessRuleValidationException()
+        public string Details { get; }
+
+        public BusinessRuleValidationException(IBusinessRule brokenRule)
+            : base(brokenRule.Message)
         {
+            BrokenRule = brokenRule;
+            this.Details = brokenRule.Message;
         }
 
-        public BusinessRuleValidationException(IBusinessRule rule)
+        public override string ToString()
         {
-            this.rule = rule;
-        }
-
-        public BusinessRuleValidationException(string message)
-         : base(message)
-        {
-        }
-
-        public BusinessRuleValidationException(string message, Exception innerException)
-        : base(message, innerException)
-        {
-        }
-
-        protected BusinessRuleValidationException(SerializationInfo info, StreamingContext context)
-         : base(info, context)
-        {
+            return $"{BrokenRule.GetType().FullName}: {BrokenRule.Message}";
         }
     }
 }
