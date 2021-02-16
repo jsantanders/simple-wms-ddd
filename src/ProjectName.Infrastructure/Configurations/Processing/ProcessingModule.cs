@@ -11,15 +11,15 @@ namespace ProjectName.Infrastructure.Configurations.Processing
     {
         protected override void Load(ContainerBuilder builder)
         {
-             builder.RegisterType<DomainEventDispatcher>()
+            builder.RegisterType<DomainEventDispatcher>()
                 .As<IDomainEventDispatcher>()
                 .InstancePerLifetimeScope();
 
-             builder.RegisterType<UnitOfWork>()
+            builder.RegisterType<UnitOfWork>()
                 .As<IUnitOfWork>()
                 .InstancePerLifetimeScope();
 
-             builder.RegisterGenericDecorator(
+            builder.RegisterGenericDecorator(
                 typeof(UnitOfWorkCommandHandlerDecorator<>),
                 typeof(ICommandHandler<>));
 
