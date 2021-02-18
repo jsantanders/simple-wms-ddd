@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ProjectName.Application.Common
+namespace ProjectName.Application.SeedWork.Commands
 {
     public class InvalidCommandException : Exception
     {

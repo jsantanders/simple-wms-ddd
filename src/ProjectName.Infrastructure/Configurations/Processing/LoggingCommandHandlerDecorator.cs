@@ -1,8 +1,9 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using ProjectName.Application.Common;
 using MediatR;
+using ProjectName.Application.SeedWork;
+using ProjectName.Application.SeedWork.Commands;
 using Serilog;
 using Serilog.Context;
 using Serilog.Core;

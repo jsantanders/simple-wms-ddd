@@ -4,7 +4,8 @@ using System.Linq;
 using MediatR;
 using NetArchTest.Rules;
 using NUnit.Framework;
-using ProjectName.Application.Common;
+using ProjectName.Application.SeedWork.Commands;
+using ProjectName.Application.SeedWork.Queries;
 using ProjectName.ArchTests.SeedWork;
 
 namespace ProjectName.ArchTests.Application

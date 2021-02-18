@@ -2,7 +2,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
-using ProjectName.Application.Common;
+using ProjectName.Application.SeedWork.Commands;
 using ProjectName.Infrastructure.Data;
 
 namespace ProjectName.Infrastructure.Configurations.Processing

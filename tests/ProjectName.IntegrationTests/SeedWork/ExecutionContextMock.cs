@@ -1,5 +1,5 @@
 using System;
-using ProjectName.Application.Common;
+using ProjectName.Application.SeedWork;
 
 namespace ProjectName.IntegrationTests.SeedWork
 {

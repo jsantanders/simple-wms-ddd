@@ -12,20 +12,20 @@ using ProjectName.Api.Configurations.Authorization;
 using ProjectName.Api.Configurations.ExecutionContext;
 using ProjectName.Api.Configurations.Validations;
 using ProjectName.Api.Extensions;
-using ProjectName.Application.Common;
+using ProjectName.Application.SeedWork;
+using ProjectName.Application.SeedWork.Commands;
 using ProjectName.Domain.SharedKernel;
 using ProjectName.Infrastructure;
 using Serilog;
 using Serilog.Formatting.Compact;
 
-
 namespace ProjectName.Api
 {
     public class Startup
     {
+        private const string ProjectNameConnectionString = "ProjectNameConnectionString";
         private readonly IConfiguration configuration;
         private static ILogger logger;
-        private const string ProjectNameConnectionString = "ProjectNameConnectionString";
 
         public Startup(IWebHostEnvironment env)
         {
@@ -82,7 +82,6 @@ namespace ProjectName.Api
             }
             else
             {
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
@@ -104,11 +103,6 @@ namespace ProjectName.Api
                     "[{Timestamp:HH:mm:ss} {Level:u3}] [{Context}] {Message:lj}{NewLine}{Exception}")
                 .WriteTo.RollingFile(new CompactJsonFormatter(), "logs/logs")
                 .CreateLogger();
-        }
-
-        private void ConfigureContainer(ContainerBuilder containerBuilder)
-        {
-            containerBuilder.RegisterModule(new ApplicationAutofacModule());
         }
 
         private void Initialize(ILifetimeScope container)

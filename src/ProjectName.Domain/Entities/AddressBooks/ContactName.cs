@@ -11,6 +11,10 @@ namespace ProjectName.Domain.Entities.AddressBooks
 
         public string LastName { get; }
 
+        private ContactName()
+        {
+        }
+
         private ContactName(
             string firstName, string middleName, string lastName)
         {

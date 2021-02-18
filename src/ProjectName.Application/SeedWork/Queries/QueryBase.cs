@@ -1,32 +1,32 @@
 ﻿using System;
 
-namespace ProjectName.Application.Common
+namespace ProjectName.Application.SeedWork.Queries
 {
-    public abstract class CommandBase : ICommand
+    public abstract class QueryBase
     {
         public Guid Id { get; }
 
-        protected CommandBase()
+        protected QueryBase()
         {
             this.Id = Guid.NewGuid();
         }
 
-        protected CommandBase(Guid id)
+        protected QueryBase(Guid id)
         {
             this.Id = id;
         }
     }
 
-    public abstract class CommandBase<TResult> : ICommand<TResult>
+    public abstract class QueryBase<TResult> : IQuery<TResult>
     {
         public Guid Id { get; }
 
-        protected CommandBase()
+        protected QueryBase()
         {
             this.Id = Guid.NewGuid();
         }
 
-        protected CommandBase(Guid id)
+        protected QueryBase(Guid id)
         {
             this.Id = id;
         }

@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using Microsoft.AspNetCore.Http;
-using ProjectName.Application.Common;
+using ProjectName.Application.SeedWork;
 
 namespace ProjectName.Api.Configurations.ExecutionContext
 {

@@ -7,7 +7,7 @@ using MediatR;
 using Microsoft.Data.SqlClient;
 using NSubstitute;
 using NUnit.Framework;
-using ProjectName.Application.Common;
+using ProjectName.Application.SeedWork;
 using ProjectName.Domain.Contracts;
 using ProjectName.Domain.SharedKernel;
 using ProjectName.Infrastructure;

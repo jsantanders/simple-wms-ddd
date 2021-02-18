@@ -1,6 +1,5 @@
 using System;
-using System.Collections;
-using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ProjectName.Domain.Contracts;
@@ -17,23 +16,26 @@ namespace ProjectName.Infrastructure.Data
             this.dbContext = dbContext;
         }
 
-        public async Task<T> GetById<T, TKey>(TKey id)
-            where T : EntityBase<TKey>, IAggregateRoot
-            where TKey : StronglyTypedIdBase
+        public async Task<T> GetById<T>(StronglyTypedIdBase id)
+            where T : class, IAggregateRoot
         {
-            return await dbContext.Set<T>().SingleOrDefaultAsync(e => e.Id == id);
+            return await dbContext.Set<T>().FindAsync(id);
         }
 
-        public async Task Create<T, TKey>(T entity)
-            where T : EntityBase<TKey>, IAggregateRoot
-            where TKey : StronglyTypedIdBase
+        public async Task<T> SingleOrDefault<T>(Expression<Func<T, bool>> predicate)
+            where T : class, IAggregateRoot
+        {
+            return await dbContext.Set<T>().SingleOrDefaultAsync(predicate);
+        }
+
+        public async Task Create<T>(T entity)
+            where T : EntityBase<StronglyTypedIdBase>, IAggregateRoot
         {
             await dbContext.Set<T>().AddAsync(entity);
         }
 
-        public void Delete<T, TKey>(T entity)
-            where T : EntityBase<TKey>, IAggregateRoot
-            where TKey : StronglyTypedIdBase
+        public void Delete<T>(T entity)
+            where T : EntityBase<StronglyTypedIdBase>, IAggregateRoot
         {
             dbContext.Set<T>().Remove(entity);
         }

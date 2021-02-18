@@ -1,4 +1,4 @@
-namespace ProjectName.Application.Common
+namespace ProjectName.Application.SeedWork.Queries
 {
     public interface IPagedQuery
     {

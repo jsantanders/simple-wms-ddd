@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ProjectName.Application.Common;
+using ProjectName.Application.SeedWork.Commands;
 
 namespace ProjectName.Api.Configurations.Validations
 {

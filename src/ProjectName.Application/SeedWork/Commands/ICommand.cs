@@ -1,7 +1,7 @@
 ﻿using System;
 using MediatR;
 
-namespace ProjectName.Application.Common
+namespace ProjectName.Application.SeedWork.Commands
 {
     public interface ICommand<out TResult> : IRequest<TResult>
     {

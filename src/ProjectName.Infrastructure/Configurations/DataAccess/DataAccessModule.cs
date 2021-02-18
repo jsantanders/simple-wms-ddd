@@ -1,8 +1,6 @@
 using Autofac;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Microsoft.Extensions.Logging;
-using ProjectName.Application.Common;
+using ProjectName.Application.SeedWork;
 using ProjectName.Domain.Contracts;
 using ProjectName.Infrastructure.Data;
 

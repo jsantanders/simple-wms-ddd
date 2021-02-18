@@ -1,6 +1,5 @@
 using System.Reflection;
-using ProjectName.Application;
-using ProjectName.Application.Common;
+using ProjectName.Application.SeedWork;
 using ProjectName.Domain.SharedKernel;
 
 namespace ProjectName.Infrastructure

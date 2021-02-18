@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using FluentValidation;
 using MediatR;
-using ProjectName.Application.Common;
+using ProjectName.Application.SeedWork.Commands;
 
 namespace ProjectName.Infrastructure.Configurations.Processing
 {

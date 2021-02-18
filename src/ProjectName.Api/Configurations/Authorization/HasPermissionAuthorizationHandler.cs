@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using ProjectName.Application.Common;
+using ProjectName.Application.SeedWork;
 
 namespace ProjectName.Api.Configurations.Authorization
 {

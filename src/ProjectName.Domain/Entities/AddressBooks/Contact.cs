@@ -14,7 +14,6 @@ namespace ProjectName.Domain.Entities.AddressBooks
 
         private Contact()
         {
-            // Only for EF.
         }
 
         private Contact(
@@ -23,7 +22,6 @@ namespace ProjectName.Domain.Entities.AddressBooks
             ContactCompany company,
             DateTime? birthday,
             string notes,
-            byte?[] contactPic,
             Address address,
             List<Telephone> telephones,
             List<Email> emails)
@@ -34,7 +32,6 @@ namespace ProjectName.Domain.Entities.AddressBooks
             Company = company;
             Birthday = birthday;
             Notes = notes;
-            ContactPic = contactPic;
             Address = address;
             this.telephones = telephones ?? new List<Telephone>();
             this.emails = emails ?? new List<Email>();
@@ -107,13 +104,12 @@ namespace ProjectName.Domain.Entities.AddressBooks
             ContactCompany company,
             DateTime? birthday,
             string notes,
-            byte?[] contactPic,
             Address address,
             List<Telephone> telephones,
             List<Email> emails)
         {
             return new Contact(
-                addressBookId, name, company, birthday, notes, contactPic, address, telephones, emails);
+                addressBookId, name, company, birthday, notes, address, telephones, emails);
         }
     }
 }

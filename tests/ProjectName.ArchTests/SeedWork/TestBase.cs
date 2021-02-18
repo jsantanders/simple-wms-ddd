@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using NUnit.Framework;
-using ProjectName.Application.Common;
+using NetArchTest.Rules;
+using ProjectName.Application.SeedWork.Commands;
 using ProjectName.Domain.SharedKernel;
 using ProjectName.Infrastructure;
-using NetArchTest.Rules;
 
 namespace ProjectName.ArchTests.SeedWork
 {

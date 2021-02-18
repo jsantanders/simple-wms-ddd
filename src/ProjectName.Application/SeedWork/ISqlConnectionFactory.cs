@@ -1,6 +1,6 @@
 using System.Data;
 
-namespace ProjectName.Application.Common
+namespace ProjectName.Application.SeedWork
 {
     public interface ISqlConnectionFactory
     {

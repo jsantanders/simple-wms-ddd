@@ -1,5 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>ProjectName.Application</AssemblyName>
+    <RootNamespace>ProjectName.Application</RootNamespace>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\ProjectName.Domain\ProjectName.Domain.csproj" />
   </ItemGroup>
@@ -16,11 +22,4 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <AssemblyName>ProjectName.Application</AssemblyName>
-    <RootNamespace>ProjectName.Application</RootNamespace>
-  </PropertyGroup>
-
 </Project>

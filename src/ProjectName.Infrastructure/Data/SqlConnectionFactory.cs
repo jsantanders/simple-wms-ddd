@@ -1,13 +1,12 @@
 using System;
 using System.Data;
 using Microsoft.Data.SqlClient;
-using ProjectName.Application.Common;
+using ProjectName.Application.SeedWork;
 
 namespace ProjectName.Infrastructure.Data
 {
     public class SqlConnectionFactory : ISqlConnectionFactory, IDisposable
     {
-
         private readonly string connectionString;
         private IDbConnection connection;
 
@@ -31,7 +30,7 @@ namespace ProjectName.Infrastructure.Data
         {
             this.connection = new SqlConnection(this.connectionString);
             this.connection.Open();
-            
+
             return this.connection;
         }
 

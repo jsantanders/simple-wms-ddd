@@ -9,6 +9,6 @@ namespace ProjectName.Domain.SharedKernel
             OccuredOn = DateTime.UtcNow;
         }
 
-        public DateTime OccuredOn { get; protected set; }
+        public DateTime OccuredOn { get; }
     }
 }

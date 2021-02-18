@@ -1,8 +1,8 @@
 using System.Linq;
 using System.Reflection;
+using Microsoft.EntityFrameworkCore;
 using ProjectName.Domain.Contracts;
 using ProjectName.Domain.SharedKernel;
-using Microsoft.EntityFrameworkCore;
 
 namespace ProjectName.Infrastructure.Data
 {

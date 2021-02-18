@@ -1,6 +1,6 @@
 using Autofac;
 using MediatR;
-using ProjectName.Application.Common;
+using ProjectName.Application.SeedWork.Commands;
 using ProjectName.Domain.Contracts;
 using ProjectName.Infrastructure.Data;
 using ProjectName.Infrastructure.Domain;

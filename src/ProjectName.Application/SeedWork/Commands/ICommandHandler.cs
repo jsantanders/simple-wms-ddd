@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace ProjectName.Application.Common
+namespace ProjectName.Application.SeedWork.Commands
 {
     public interface ICommandHandler<in TCommand> : IRequestHandler<TCommand>
         where TCommand : ICommand

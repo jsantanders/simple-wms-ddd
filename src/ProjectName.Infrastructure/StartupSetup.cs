@@ -1,5 +1,5 @@
 using Autofac;
-using ProjectName.Application.Common;
+using ProjectName.Application.SeedWork;
 using ProjectName.Infrastructure.Configurations.DataAccess;
 using ProjectName.Infrastructure.Configurations.Logging;
 using ProjectName.Infrastructure.Configurations.Mediation;
@@ -29,13 +29,13 @@ namespace ProjectName.Infrastructure
             ILogger logger)
         {
             var containerBuilder = new ContainerBuilder();
-            
+
             // Be careful, order matters.
             containerBuilder.RegisterModule(new LoggingModule(logger));
             containerBuilder.RegisterModule(new ProcessingModule());
             containerBuilder.RegisterModule(new DataAccessModule(connectionString));
             containerBuilder.RegisterModule(new MediatorModule());
-            
+
             containerBuilder.RegisterInstance(executionContextAccessor);
 
             container = containerBuilder.Build();

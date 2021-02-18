@@ -1,6 +1,8 @@
 using System.Threading.Tasks;
+using ProjectName.Application.SeedWork.Commands;
+using ProjectName.Application.SeedWork.Queries;
 
-namespace ProjectName.Application.Common
+namespace ProjectName.Application.SeedWork
 {
     public interface IExecutor
     {

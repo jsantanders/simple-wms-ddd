@@ -1,6 +1,6 @@
 using System;
 
-namespace ProjectName.Application.Common
+namespace ProjectName.Application.SeedWork
 {
     public interface IExecutionContextAccessor
     {

@@ -3,13 +3,13 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using ProjectName.Api;
-using ProjectName.Domain.Contracts;
-using ProjectName.Infrastructure.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using ProjectName.Api;
+using ProjectName.Domain.Contracts;
+using ProjectName.Infrastructure.Data;
 
 namespace ProjectName.FunctionalTests
 {
