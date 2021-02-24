@@ -2,11 +2,11 @@ using ProjectName.Domain.Contracts;
 
 namespace ProjectName.Domain.Entities.AddressBooks.Rules
 {
-    public class ContactCompanyNameCannotBeNullOrEmpty : IBusinessRule
+    public class ContactCompanyNameCannotBeNullOrEmptyRule : IBusinessRule
     {
         private readonly string companyName;
 
-        public ContactCompanyNameCannotBeNullOrEmpty(string companyName)
+        public ContactCompanyNameCannotBeNullOrEmptyRule(string companyName)
         {
             this.companyName = companyName;
         }

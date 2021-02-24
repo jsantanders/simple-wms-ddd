@@ -26,7 +26,7 @@ namespace ProjectName.Domain.Entities.AddressBooks
         public static ContactName Create(
             string firstName, string middleName, string lastName)
         {
-            CheckRule(new ContactFirstNameCannotBeNullOrEmpty(firstName));
+            CheckRule(new ContactFirstNameCannotBeNullOrEmptyRule(firstName));
             return new ContactName(firstName, middleName, lastName);
         }
     }

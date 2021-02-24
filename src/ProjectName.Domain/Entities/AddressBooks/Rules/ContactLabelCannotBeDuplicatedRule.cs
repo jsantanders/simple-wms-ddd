@@ -2,14 +2,14 @@ using ProjectName.Domain.Contracts;
 
 namespace ProjectName.Domain.Entities.AddressBooks.Rules
 {
-    public class ContactLabelCannotBeDuplicated : IBusinessRule
+    public class ContactLabelCannotBeDuplicatedRule : IBusinessRule
     {
         private readonly string name;
         private readonly string color;
 
         public string Message => throw new System.NotImplementedException();
 
-        public ContactLabelCannotBeDuplicated(string name, string color)
+        public ContactLabelCannotBeDuplicatedRule(string name, string color)
         {
             this.name = name;
             this.color = color;

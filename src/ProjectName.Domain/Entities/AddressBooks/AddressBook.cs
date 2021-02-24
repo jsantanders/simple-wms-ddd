@@ -47,9 +47,20 @@ namespace ProjectName.Domain.Entities.AddressBooks
             return contact.Id;
         }
 
+        public void UpdateContactInfo(
+            ContactId contactId,
+            ContactName name,
+            ContactCompany company,
+            DateTime? birthday,
+            string notes)
+        {
+            var contact = contacts.Single(c => c.Id == contactId);
+            contact.UpdateContactInfo(name, company, birthday, notes);
+        }
+
         public void AddLabel(string name, string color)
         {
-            this.CheckRule(new ContactLabelCannotBeDuplicated(name, color));
+            this.CheckRule(new ContactLabelCannotBeDuplicatedRule(name, color));
             labels.Add(ContactLabel.Create(Id, name, color));
         }
 

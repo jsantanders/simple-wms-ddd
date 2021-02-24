@@ -12,13 +12,12 @@ namespace ProjectName.Domain.Entities.AddressBooks
 
         private ContactLabel()
         {
-            // Only for EF.
         }
 
         private ContactLabel(AddressBookId addressBookId, string name, string color)
         {
-            this.CheckRule(new ContactLabelNameCannotBeNullOrEmpty(name));
-            this.CheckRule(new ContactLabelColorCannotBeNullOrEmpty(color));
+            this.CheckRule(new ContactLabelNameCannotBeNullOrEmptyRule(name));
+            this.CheckRule(new ContactLabelColorCannotBeNullOrEmptyRule(color));
 
             ContactLabelId = new ContactLabelId(Guid.NewGuid());
             AddressBookId = addressBookId;
@@ -26,13 +25,13 @@ namespace ProjectName.Domain.Entities.AddressBooks
             Color = color;
         }
 
-        public ContactLabelId ContactLabelId { get; private set; }
+        internal ContactLabelId ContactLabelId { get; private set; }
 
-        public AddressBookId AddressBookId { get; private set; }
+        internal AddressBookId AddressBookId { get; private set; }
 
-        public string Name { get; private set; }
+        internal string Name { get; private set; }
 
-        public string Color { get; private set; }
+        internal string Color { get; private set; }
 
         internal static ContactLabel Create(AddressBookId addressBookId, string name, string color)
         {

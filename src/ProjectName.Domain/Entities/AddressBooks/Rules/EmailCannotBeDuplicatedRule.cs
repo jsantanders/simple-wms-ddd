@@ -4,12 +4,12 @@ using ProjectName.Domain.Contracts;
 
 namespace ProjectName.Domain.Entities.AddressBooks.Rules
 {
-    public class EmailCannotBeDuplicated : IBusinessRule
+    public class EmailCannotBeDuplicatedRule : IBusinessRule
     {
         private readonly List<Email> emails;
         private readonly Email email;
 
-        public EmailCannotBeDuplicated(List<Email> emails, Email email)
+        public EmailCannotBeDuplicatedRule(List<Email> emails, Email email)
         {
             this.emails = emails;
             this.email = email;

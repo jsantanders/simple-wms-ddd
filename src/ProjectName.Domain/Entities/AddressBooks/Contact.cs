@@ -39,43 +39,43 @@ namespace ProjectName.Domain.Entities.AddressBooks
             this.AddDomainEvent(new ContactCreatedDomainEvent(ContactId));
         }
 
-        public ContactId ContactId { get; private set; }
+        internal ContactId ContactId { get; private set; }
 
-        public ContactLabelId ContactLabelId { get; private set; }
+        internal ContactLabelId ContactLabelId { get; private set; }
 
-        public AddressBookId AddressBookId { get; private set; }
+        internal AddressBookId AddressBookId { get; private set; }
 
-        public ContactName Name { get; private set; }
+        internal ContactName Name { get; private set; }
 
-        public ContactCompany Company { get; private set; }
+        internal ContactCompany Company { get; private set; }
 
-        public DateTime? Birthday { get; private set; }
+        internal DateTime? Birthday { get; private set; }
 
-        public string Notes { get; private set; }
+        internal string Notes { get; private set; }
 
-        public byte?[] ContactPic { get; private set; }
+        internal byte?[] ContactPic { get; private set; }
 
-        public Address Address { get; private set; }
+        internal Address Address { get; private set; }
 
-        public bool IsFavorite { get; private set; }
+        internal bool IsFavorite { get; private set; }
 
-        public IReadOnlyCollection<Telephone> Telephones => telephones.AsReadOnly();
+        internal IReadOnlyCollection<Telephone> Telephones => telephones.AsReadOnly();
 
-        public IReadOnlyCollection<Email> Emails => emails.AsReadOnly();
+        internal IReadOnlyCollection<Email> Emails => emails.AsReadOnly();
 
-        public void AddTelephone(Telephone telephone)
+        internal void AddTelephone(Telephone telephone)
         {
-            this.CheckRule(new TelephoneCannotBeDuplicated(telephones, telephone));
+            this.CheckRule(new TelephoneCannotBeDuplicatedRule(telephones, telephone));
             telephones.Add(telephone);
         }
 
-        public void AddEmail(Email email)
+        internal void AddEmail(Email email)
         {
-            this.CheckRule(new EmailCannotBeDuplicated(emails, email));
+            this.CheckRule(new EmailCannotBeDuplicatedRule(emails, email));
             emails.Add(email);
         }
 
-        public void UpdateContactInfo(
+        internal void UpdateContactInfo(
             ContactName newName, ContactCompany newCompany, DateTime? newBirthday, string newNotes)
         {
             Name = newName ?? Name;
@@ -84,19 +84,19 @@ namespace ProjectName.Domain.Entities.AddressBooks
             Notes = newNotes ?? Notes;
         }
 
-        public void AssignLabel(ContactLabelId contactLabelId) => ContactLabelId = contactLabelId;
+        internal void AssignLabel(ContactLabelId contactLabelId) => ContactLabelId = contactLabelId;
 
-        public void ChangeAddress(Address address) => Address = address;
+        internal void ChangeAddress(Address address) => Address = address;
 
-        public void MarkContactAsFavorite() => IsFavorite = true;
+        internal void MarkContactAsFavorite() => IsFavorite = true;
 
-        public void RemoveFromFavorites() => IsFavorite = false;
+        internal void RemoveFromFavorites() => IsFavorite = false;
 
-        public void RemoveTelephone(Telephone telephone) => telephones.Remove(telephone);
+        internal void RemoveTelephone(Telephone telephone) => telephones.Remove(telephone);
 
-        public void RemoveEmail(Email email) => emails.Remove(email);
+        internal void RemoveEmail(Email email) => emails.Remove(email);
 
-        public void RemoveLabel() => ContactLabelId = null;
+        internal void RemoveLabel() => ContactLabelId = null;
 
         internal static Contact Create(
             AddressBookId addressBookId,

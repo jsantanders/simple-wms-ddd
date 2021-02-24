@@ -4,12 +4,12 @@ using ProjectName.Domain.Contracts;
 
 namespace ProjectName.Domain.Entities.AddressBooks.Rules
 {
-    public class TelephoneCannotBeDuplicated : IBusinessRule
+    public class TelephoneCannotBeDuplicatedRule : IBusinessRule
     {
         private readonly List<Telephone> telephones;
         private readonly Telephone telephone;
 
-        public TelephoneCannotBeDuplicated(List<Telephone> telephones, Telephone telephone)
+        public TelephoneCannotBeDuplicatedRule(List<Telephone> telephones, Telephone telephone)
         {
             this.telephones = telephones;
             this.telephone = telephone;

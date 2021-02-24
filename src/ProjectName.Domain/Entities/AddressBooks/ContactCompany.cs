@@ -17,7 +17,7 @@ namespace ProjectName.Domain.Entities.AddressBooks
 
         public static ContactCompany Create(string companyName, string title)
         {
-            CheckRule(new ContactCompanyNameCannotBeNullOrEmpty(companyName));
+            CheckRule(new ContactCompanyNameCannotBeNullOrEmptyRule(companyName));
             return new ContactCompany(companyName, title);
         }
     }
