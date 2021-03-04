@@ -5,13 +5,10 @@ using ProjectName.Application.SeedWork.Commands;
 
 namespace ProjectName.Application.AddressBooks.AddContact
 {
-    [DataContract]
     public class AddContactCommand : CommandBase<Guid>
     {
-        [DataMember]
         private readonly List<TelephoneDto> telephones;
 
-        [DataMember]
         private readonly List<EmailDto> emails;
 
         public AddContactCommand(
@@ -46,46 +43,32 @@ namespace ProjectName.Application.AddressBooks.AddContact
             this.emails = emails;
         }
 
-        [DataMember]
         public string FirstName { get; }
 
-        [DataMember]
         public string MiddleName { get; }
 
-        [DataMember]
         public string LastName { get; }
 
-        [DataMember]
         public string CompanyName { get; }
 
-        [DataMember]
         public string CompanyTitle { get; }
 
-        [DataMember]
         public DateTime? Birthday { get; }
 
-        [DataMember]
         public string Notes { get; }
 
-        [DataMember]
         public string Country { get; }
 
-        [DataMember]
         public string State { get; }
 
-        [DataMember]
         public string City { get; }
 
-        [DataMember]
         public string AddressLine1 { get; }
 
-        [DataMember]
         public string AddressLine2 { get; }
 
-        [DataMember]
         public IEnumerable<TelephoneDto> Telephones => telephones;
 
-        [DataMember]
         public IEnumerable<EmailDto> Emails => emails;
     }
 }

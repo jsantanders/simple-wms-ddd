@@ -1,39 +1,34 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A02FD4B6-B86A-4A42-99F0-B412CDA51E92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectName.Domain", "src\ProjectName.Domain\ProjectName.Domain.csproj", "{FBA6B78C-CFE8-4656-BD3A-985929B8FB70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.Domain", "ProjectName.Domain\ProjectName.Domain.csproj", "{FBA6B78C-CFE8-4656-BD3A-985929B8FB70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectName.Application", "src\ProjectName.Application\ProjectName.Application.csproj", "{0D6BD3BA-2114-4291-953D-59A3BCA2F970}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.Application", "ProjectName.Application\ProjectName.Application.csproj", "{0D6BD3BA-2114-4291-953D-59A3BCA2F970}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectName.Infrastructure", "src\ProjectName.Infrastructure\ProjectName.Infrastructure.csproj", "{144263B6-7351-42C1-9023-7B0036F16D96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.Infrastructure", "ProjectName.Infrastructure\ProjectName.Infrastructure.csproj", "{144263B6-7351-42C1-9023-7B0036F16D96}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D0AD8003-5F49-40E7-9FFD-748DC7FDD648}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectName.Api", "src\ProjectName.Api\ProjectName.Api.csproj", "{C1D0D1BE-5D06-4C99-AC66-E4C50AF94C4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.Api", "ProjectName.Api\ProjectName.Api.csproj", "{C1D0D1BE-5D06-4C99-AC66-E4C50AF94C4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectName.UnitTests", "tests\ProjectName.UnitTests\ProjectName.UnitTests.csproj", "{897BD7DC-AF05-49B1-A1C8-AC5AB14397FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.UnitTests", "tests\ProjectName.UnitTests\ProjectName.UnitTests.csproj", "{897BD7DC-AF05-49B1-A1C8-AC5AB14397FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectName.ArchTests", "tests\ProjectName.ArchTests\ProjectName.ArchTests.csproj", "{844C496A-A521-450B-A64A-07BE192F6C15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.ArchTests", "tests\ProjectName.ArchTests\ProjectName.ArchTests.csproj", "{844C496A-A521-450B-A64A-07BE192F6C15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectName.IntegrationTests", "tests\ProjectName.IntegrationTests\ProjectName.IntegrationTests.csproj", "{7BF750F1-FB9E-4620-9E98-652EECD14F67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.IntegrationTests", "tests\ProjectName.IntegrationTests\ProjectName.IntegrationTests.csproj", "{7BF750F1-FB9E-4620-9E98-652EECD14F67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectName.FunctionalTests", "tests\ProjectName.FunctionalTests\ProjectName.FunctionalTests.csproj", "{66CF902A-710A-4FE1-9682-889697C35289}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.FunctionalTests", "tests\ProjectName.FunctionalTests\ProjectName.FunctionalTests.csproj", "{66CF902A-710A-4FE1-9682-889697C35289}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CI", "CI", "{9AB3D621-2C6E-46D1-8B59-7DAA01E4DC7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{FBA6B78C-CFE8-4656-BD3A-985929B8FB70} = {A02FD4B6-B86A-4A42-99F0-B412CDA51E92}
-		{0D6BD3BA-2114-4291-953D-59A3BCA2F970} = {A02FD4B6-B86A-4A42-99F0-B412CDA51E92}
-		{144263B6-7351-42C1-9023-7B0036F16D96} = {A02FD4B6-B86A-4A42-99F0-B412CDA51E92}
-		{C1D0D1BE-5D06-4C99-AC66-E4C50AF94C4A} = {A02FD4B6-B86A-4A42-99F0-B412CDA51E92}
-		{897BD7DC-AF05-49B1-A1C8-AC5AB14397FE} = {D0AD8003-5F49-40E7-9FFD-748DC7FDD648}
-		{844C496A-A521-450B-A64A-07BE192F6C15} = {D0AD8003-5F49-40E7-9FFD-748DC7FDD648}
-		{7BF750F1-FB9E-4620-9E98-652EECD14F67} = {D0AD8003-5F49-40E7-9FFD-748DC7FDD648}
-		{66CF902A-710A-4FE1-9682-889697C35289} = {D0AD8003-5F49-40E7-9FFD-748DC7FDD648}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FBA6B78C-CFE8-4656-BD3A-985929B8FB70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -68,5 +63,21 @@ Global
 		{66CF902A-710A-4FE1-9682-889697C35289}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66CF902A-710A-4FE1-9682-889697C35289}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66CF902A-710A-4FE1-9682-889697C35289}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FBA6B78C-CFE8-4656-BD3A-985929B8FB70} = {A02FD4B6-B86A-4A42-99F0-B412CDA51E92}
+		{0D6BD3BA-2114-4291-953D-59A3BCA2F970} = {A02FD4B6-B86A-4A42-99F0-B412CDA51E92}
+		{144263B6-7351-42C1-9023-7B0036F16D96} = {A02FD4B6-B86A-4A42-99F0-B412CDA51E92}
+		{C1D0D1BE-5D06-4C99-AC66-E4C50AF94C4A} = {A02FD4B6-B86A-4A42-99F0-B412CDA51E92}
+		{897BD7DC-AF05-49B1-A1C8-AC5AB14397FE} = {D0AD8003-5F49-40E7-9FFD-748DC7FDD648}
+		{844C496A-A521-450B-A64A-07BE192F6C15} = {D0AD8003-5F49-40E7-9FFD-748DC7FDD648}
+		{7BF750F1-FB9E-4620-9E98-652EECD14F67} = {D0AD8003-5F49-40E7-9FFD-748DC7FDD648}
+		{66CF902A-710A-4FE1-9682-889697C35289} = {D0AD8003-5F49-40E7-9FFD-748DC7FDD648}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EA588AA-E1E3-48D2-86DB-985A21531C33}
 	EndGlobalSection
 EndGlobal

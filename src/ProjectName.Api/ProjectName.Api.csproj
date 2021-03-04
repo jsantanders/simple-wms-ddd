@@ -8,9 +8,13 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Remove="Controllers\**" />
         <Compile Remove="logs\**" />
+        <Content Remove="Controllers\**" />
         <Content Remove="logs\**" />
+        <EmbeddedResource Remove="Controllers\**" />
         <EmbeddedResource Remove="logs\**" />
+        <None Remove="Controllers\**" />
         <None Remove="logs\**" />
     </ItemGroup>
 
@@ -48,10 +52,6 @@
         <Content Update="appsettings.json">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Controllers" />
     </ItemGroup>
 
 </Project>
