@@ -3,27 +3,38 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A02FD4B6-B86A-4A42-99F0-B412CDA51E92}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{A02FD4B6-B86A-4A42-99F0-B412CDA51E92}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.Domain", "ProjectName.Domain\ProjectName.Domain.csproj", "{FBA6B78C-CFE8-4656-BD3A-985929B8FB70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.Domain", "Server\ProjectName.Domain\ProjectName.Domain.csproj", "{FBA6B78C-CFE8-4656-BD3A-985929B8FB70}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.Application", "ProjectName.Application\ProjectName.Application.csproj", "{0D6BD3BA-2114-4291-953D-59A3BCA2F970}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.Application", "Server\ProjectName.Application\ProjectName.Application.csproj", "{0D6BD3BA-2114-4291-953D-59A3BCA2F970}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.Infrastructure", "ProjectName.Infrastructure\ProjectName.Infrastructure.csproj", "{144263B6-7351-42C1-9023-7B0036F16D96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.Infrastructure", "Server\ProjectName.Infrastructure\ProjectName.Infrastructure.csproj", "{144263B6-7351-42C1-9023-7B0036F16D96}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D0AD8003-5F49-40E7-9FFD-748DC7FDD648}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D0AD8003-5F49-40E7-9FFD-748DC7FDD648}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.Api", "ProjectName.Api\ProjectName.Api.csproj", "{C1D0D1BE-5D06-4C99-AC66-E4C50AF94C4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.Api", "Server\ProjectName.Api\ProjectName.Api.csproj", "{C1D0D1BE-5D06-4C99-AC66-E4C50AF94C4A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.UnitTests", "tests\ProjectName.UnitTests\ProjectName.UnitTests.csproj", "{897BD7DC-AF05-49B1-A1C8-AC5AB14397FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.UnitTests", "Tests\ProjectName.UnitTests\ProjectName.UnitTests.csproj", "{897BD7DC-AF05-49B1-A1C8-AC5AB14397FE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.ArchTests", "tests\ProjectName.ArchTests\ProjectName.ArchTests.csproj", "{844C496A-A521-450B-A64A-07BE192F6C15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.ArchTests", "Tests\ProjectName.ArchTests\ProjectName.ArchTests.csproj", "{844C496A-A521-450B-A64A-07BE192F6C15}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.IntegrationTests", "tests\ProjectName.IntegrationTests\ProjectName.IntegrationTests.csproj", "{7BF750F1-FB9E-4620-9E98-652EECD14F67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.IntegrationTests", "Tests\ProjectName.IntegrationTests\ProjectName.IntegrationTests.csproj", "{7BF750F1-FB9E-4620-9E98-652EECD14F67}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.FunctionalTests", "tests\ProjectName.FunctionalTests\ProjectName.FunctionalTests.csproj", "{66CF902A-710A-4FE1-9682-889697C35289}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.FunctionalTests", "Tests\ProjectName.FunctionalTests\ProjectName.FunctionalTests.csproj", "{66CF902A-710A-4FE1-9682-889697C35289}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CI", "CI", "{9AB3D621-2C6E-46D1-8B59-7DAA01E4DC7C}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\buildPipeline.yml = ..\.github\workflows\buildPipeline.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{C4BB6F04-A1F3-4E56-ABDB-F3E1A20D6E9D}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ProjectName.Database", "Database\ProjectName.Database\ProjectName.Database.sqlproj", "{33DD7883-E043-4B79-B057-1B71477A537F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectName.DatabaseMigrator", "Database\ProjectName.DatabaseMigrator\ProjectName.DatabaseMigrator.csproj", "{14B59795-F359-463A-8E95-1825E470B811}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{55557A29-865A-4A0C-823B-7C9CBCF83350}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +74,20 @@ Global
 		{66CF902A-710A-4FE1-9682-889697C35289}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66CF902A-710A-4FE1-9682-889697C35289}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66CF902A-710A-4FE1-9682-889697C35289}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33DD7883-E043-4B79-B057-1B71477A537F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33DD7883-E043-4B79-B057-1B71477A537F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33DD7883-E043-4B79-B057-1B71477A537F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{33DD7883-E043-4B79-B057-1B71477A537F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33DD7883-E043-4B79-B057-1B71477A537F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33DD7883-E043-4B79-B057-1B71477A537F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{14B59795-F359-463A-8E95-1825E470B811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14B59795-F359-463A-8E95-1825E470B811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14B59795-F359-463A-8E95-1825E470B811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14B59795-F359-463A-8E95-1825E470B811}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55557A29-865A-4A0C-823B-7C9CBCF83350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55557A29-865A-4A0C-823B-7C9CBCF83350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55557A29-865A-4A0C-823B-7C9CBCF83350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55557A29-865A-4A0C-823B-7C9CBCF83350}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +101,8 @@ Global
 		{844C496A-A521-450B-A64A-07BE192F6C15} = {D0AD8003-5F49-40E7-9FFD-748DC7FDD648}
 		{7BF750F1-FB9E-4620-9E98-652EECD14F67} = {D0AD8003-5F49-40E7-9FFD-748DC7FDD648}
 		{66CF902A-710A-4FE1-9682-889697C35289} = {D0AD8003-5F49-40E7-9FFD-748DC7FDD648}
+		{33DD7883-E043-4B79-B057-1B71477A537F} = {C4BB6F04-A1F3-4E56-ABDB-F3E1A20D6E9D}
+		{14B59795-F359-463A-8E95-1825E470B811} = {C4BB6F04-A1F3-4E56-ABDB-F3E1A20D6E9D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1EA588AA-E1E3-48D2-86DB-985A21531C33}
