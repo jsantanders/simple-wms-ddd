@@ -49,13 +49,11 @@ namespace ProjectName.Domain.Entities.AddressBooks
 
         internal ContactCompany Company { get; private set; }
 
+        internal Address Address { get; private set; }
+
         internal DateTime? Birthday { get; private set; }
 
         internal string Notes { get; private set; }
-
-        internal byte?[] ContactPic { get; private set; }
-
-        internal Address Address { get; private set; }
 
         internal bool IsFavorite { get; private set; }
 
